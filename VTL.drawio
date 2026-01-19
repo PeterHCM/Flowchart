@@ -1,63 +1,55 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0" version="29.3.2" pages="4">
   <diagram id="prtHgNgQTEPvFCAcTncT" name="Test">
-    <mxGraphModel dx="1098" dy="537" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2752" dy="1706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="pool" parent="1" style="swimlane;html=1;childLayout=stackLayout;startSize=34;horizontal=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#006361;strokeWidth=2;" value="QUY TRÌNH BÁN HÀNG – ERPNEXT (STANDARD)" vertex="1">
-          <mxGeometry height="540" width="740" x="40" y="40" as="geometry" />
+        <mxCell id="pool" parent="1" style="swimlane;horizontal=1;startSize=40;fillColor=#f5f5f5;strokeColor=#666;" value="ERPNext SALES ↔ PURCHASING WORKFLOW" vertex="1">
+          <mxGeometry height="520" width="1100" x="40" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="lane_customer" parent="pool" style="swimlane;html=1;startSize=30;horizontal=0;fillColor=#ffffff;strokeColor=#cccccc;" value="KHÁCH HÀNG" vertex="1">
-          <mxGeometry height="110" width="710" x="30" as="geometry" />
+        <mxCell id="lane_customer" parent="pool" style="swimlane;horizontal=0;startSize=30;fillColor=#fff;strokeColor=#999;" value="CUSTOMER" vertex="1">
+          <mxGeometry height="100" width="1100" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="c1" parent="lane_customer" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#006361;strokeWidth=2;" value="Gửi yêu cầu / Inquiry" vertex="1">
-          <mxGeometry height="45" width="170" x="40" y="35" as="geometry" />
+        <mxCell id="inquiry" parent="lane_customer" style="rounded=1;fillColor=#ffe0cc;strokeColor=#e06800;fontStyle=1" value="Inquiry / Requirement" vertex="1">
+          <mxGeometry height="40" width="160" x="40" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="lane_sales" parent="pool" style="swimlane;html=1;startSize=30;horizontal=0;fillColor=#fff3eb;strokeColor=#e06800;strokeWidth=2;" value="KINH DOANH (CRM / SALES)" vertex="1">
-          <mxGeometry height="170" width="710" x="30" y="110" as="geometry" />
+        <mxCell id="lane_sales" parent="pool" style="swimlane;horizontal=0;startSize=30;fillColor=#fff;strokeColor=#999;" value="SALES" vertex="1">
+          <mxGeometry height="120" width="1100" y="140" as="geometry" />
         </mxCell>
-        <mxCell id="s1" parent="lane_sales" style="rounded=1;html=1;fillColor=#e06800;fontColor=#ffffff;strokeColor=#b55400;strokeWidth=2;" value="Cơ hội bán hàng (Opportunity)" vertex="1">
-          <mxGeometry height="45" width="200" x="240" y="25" as="geometry" />
+        <mxCell id="lead" parent="lane_sales" style="rounded=1;fillColor=#ffe0cc;strokeColor=#e06800" value="Lead" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="s2" parent="lane_sales" style="rounded=1;html=1;fillColor=#f6a25a;fontColor=#ffffff;strokeColor=#e06800;strokeWidth=2;" value="Báo giá (Quotation)" vertex="1">
-          <mxGeometry height="45" width="180" x="470" y="25" as="geometry" />
+        <mxCell id="opportunity" parent="lane_sales" style="rounded=1;fillColor=#ffe0cc;strokeColor=#e06800;fontStyle=1" value="Opportunity" vertex="1">
+          <mxGeometry height="40" width="140" x="200" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="s3" parent="lane_sales" style="rounded=1;html=1;fillColor=#ffd1ad;strokeColor=#e06800;strokeWidth=2;" value="Đơn bán hàng (Sales Order)" vertex="1">
-          <mxGeometry height="45" width="180" x="470" y="90" as="geometry" />
+        <mxCell id="cust_quote" parent="lane_sales" style="rounded=1;fillColor=#ffe0cc;strokeColor=#e06800" value="Customer Quotation" vertex="1">
+          <mxGeometry height="40" width="180" x="760" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="lane_stock" parent="pool" style="swimlane;html=1;startSize=30;horizontal=0;fillColor=#eef7f6;strokeColor=#006361;strokeWidth=2;" value="KHO (WAREHOUSE)" vertex="1">
-          <mxGeometry height="120" width="710" x="30" y="280" as="geometry" />
+        <mxCell id="lane_purchase" parent="pool" style="swimlane;horizontal=0;startSize=30;fillColor=#fff;strokeColor=#999;" value="PURCHASING" vertex="1">
+          <mxGeometry height="120" width="1100" y="260" as="geometry" />
         </mxCell>
-        <mxCell id="w1" parent="lane_stock" style="rounded=1;html=1;fillColor=#006361;fontColor=#ffffff;strokeColor=#004a48;strokeWidth=2;" value="Giao hàng (Delivery Note)" vertex="1">
-          <mxGeometry height="45" width="190" x="520" y="35" as="geometry" />
+        <mxCell id="rfq" parent="lane_purchase" style="rounded=1;fillColor=#d9f0ec;strokeColor=#006361" value="RFQ to Supplier" vertex="1">
+          <mxGeometry height="40" width="160" x="380" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="lane_fin" parent="pool" style="swimlane;html=1;startSize=30;horizontal=0;fillColor=#f2f2f2;strokeColor=#999999;" value="KẾ TOÁN (FINANCE)" vertex="1">
-          <mxGeometry height="140" width="710" x="30" y="400" as="geometry" />
+        <mxCell id="supplier_quote" parent="lane_purchase" style="rounded=1;fillColor=#d9f0ec;strokeColor=#006361;fontStyle=1" value="Supplier Quotation" vertex="1">
+          <mxGeometry height="40" width="180" x="580" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="f1" parent="lane_fin" style="rounded=1;html=1;fillColor=#dddddd;strokeColor=#666666;" value="Hóa đơn bán hàng (Sales Invoice)" vertex="1">
-          <mxGeometry height="40" width="200" x="520" y="20" as="geometry" />
+        <mxCell id="lane_finance" parent="pool" style="swimlane;horizontal=0;startSize=30;fillColor=#fff;strokeColor=#999;" value="FINANCE" vertex="1">
+          <mxGeometry height="120" width="1100" y="380" as="geometry" />
         </mxCell>
-        <mxCell id="f2" parent="lane_fin" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#006361;strokeWidth=2;fontStyle=1;" value="Thu tiền (Payment Entry)" vertex="1">
-          <mxGeometry height="45" width="200" x="520" y="75" as="geometry" />
+        <mxCell id="sales_order" parent="lane_finance" style="rounded=1;fillColor=#fff;strokeColor=#333;fontStyle=1" value="Sales Order" vertex="1">
+          <mxGeometry height="40" width="140" x="760" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="e1" edge="1" parent="pool" source="c1" target="s1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="purchase_order" parent="lane_finance" style="rounded=1;fillColor=#fff;strokeColor=#333" value="Purchase Order" vertex="1">
+          <mxGeometry height="40" width="140" x="940" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="e2" edge="1" parent="pool" source="s1" target="s2">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e3" edge="1" parent="pool" source="s2" target="s3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e4" edge="1" parent="pool" source="s3" target="w1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e5" edge="1" parent="pool" source="w1" target="f1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e6" edge="1" parent="pool" source="f1" target="f2">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
+        <mxCell id="OD5eOJnn8qdCiDnLBe7m-1" edge="1" parent="pool" source="inquiry" target="lead" />
+        <mxCell id="OD5eOJnn8qdCiDnLBe7m-2" edge="1" parent="pool" source="lead" target="opportunity" />
+        <mxCell id="OD5eOJnn8qdCiDnLBe7m-3" edge="1" parent="pool" source="opportunity" target="rfq" />
+        <mxCell id="OD5eOJnn8qdCiDnLBe7m-4" edge="1" parent="pool" source="rfq" target="supplier_quote" />
+        <mxCell id="OD5eOJnn8qdCiDnLBe7m-5" edge="1" parent="pool" source="supplier_quote" target="cust_quote" />
+        <mxCell id="OD5eOJnn8qdCiDnLBe7m-6" edge="1" parent="pool" source="cust_quote" target="sales_order" />
+        <mxCell id="OD5eOJnn8qdCiDnLBe7m-7" edge="1" parent="pool" source="sales_order" target="purchase_order" />
       </root>
     </mxGraphModel>
   </diagram>
